@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Province</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #e45441;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* แบ่ง 3 คอลัมน์ */
+            gap: 20px;
+            max-width: 1000px;
+            /* กำหนดความกว้างสูงสุด */
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: #e45441;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            height: 300px;
+            /* กำหนดความสูงการ์ด */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background-color: #e45441;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            /* กำหนดความสูงรูปภาพ */
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover img {
+            opacity: 0.8;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e45441;
+            transition: color 0.3s;
+        }
+
+        .card:hover h3 {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Choose a Province</h1>
+    <div class="background-container">
+        <div class="container">
+            <a class="card" href="{{ url_for('filter_a') }}">
+                <h3>Ayutthaya</h3>
+                <img src="{{ url_for('static', filename='images/filter_Ayutthaya.png') }}">
+            </a>
+            <a class="card" href="{{ url_for('filter_sa') }}">
+                <h3>Samut Songkhram</h3>
+                <img src="{{ url_for('static', filename='images/filter_Samut_SongKhram.png') }}">
+            </a>
+            <a class="card" href="{{ url_for('filter_n') }}">
+                <h3>Nakhon Pathom</h3>
+                <img src="{{ url_for('static', filename='images/filter_NakhonPathom.png') }}">
+            </a>
+            <a class="card" href="{{ url_for('filter_su') }}">
+                <h3>Suphan Buri</h3>
+                <img src="{{ url_for('static', filename='images/filter_Suphan Buri.png') }}">
+            </a>
+            <a class="card" href="{{ url_for('filter_l') }}">
+                <h3>Lop Buri</h3>
+                <img src="{{ url_for('static', filename='images/filter_Lop Buri.png') }}">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
