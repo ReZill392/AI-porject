@@ -6,7 +6,12 @@ app = Flask(__name__,static_folder='static')
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/choose_province')
+def choose_province():
     return render_template('Choose_Province_All.html')
+
 @app.route('/filter_a')
 def filter_a():
     return render_template('filter_a.html')

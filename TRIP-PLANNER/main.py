@@ -108,35 +108,5 @@ def show_plan_a():
     # ดึงค่าจาก Query Parameters
     destination = request.args.get('destination', 'Unknown Destination')
     
-    # ตรวจสอบ destination และกำหนดข้อมูลให้เหมาะสม
-    if destination == 'Lopburi':
-        image = url_for('static', filename='images/Show_Plan_ลพบุรี(1).jpeg')
-        title = 'Lopburi'
-        result = "ข้อมูลแผนการเดินทางสำหรับลพบุรี"
-    elif destination == 'Ayutthaya':
-        image = '../static/images/Show_Plan_อยุธยา(1).jpeg'
-        title = 'Ayutthaya'
-        result = "ข้อมูลแผนการเดินทางสำหรับอยุธยา"
-    elif destination == 'Nakhon Pathom':
-        image = '../static/images/Show_Plan_นครปฐม(1).jpeg'
-        title = 'Nakhon Pathom'
-        result = "ข้อมูลแผนการเดินทางสำหรับนครปฐม"
-    elif destination == 'Suphan Buri':
-        image = '../static/images/Show_Plan_สุพรรณบุรี(1).jpeg'
-        title = 'Suphan Buri'
-        result = "ข้อมูลแผนการเดินทางสำหรับสุพรรณบุรี"
-    else :
-        image = '../static/images/Show_Plan_สมุทรสงคราม(1).jpeg'
-        title = 'Samut SongKhram'
-        result = "ข้อมูลแผนการเดินทางสำหรับสมุทรสงคราม"
-        
-
-    return render_template(
-        'show_plan_a.html', 
-        image=image,
-        title=title, 
-        result=result
-    )
-
 if __name__ == '__main__':
     app.run(debug=True)

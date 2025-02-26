@@ -43,7 +43,9 @@ class TravelTasks:
             description=dedent(
                 f"""
                 **Task**: Identify the Best City for the Trip
-                **Description**: Analyze and select the best city for the trip based on specific criteria such as weather patterns, seasonal events, and travel costs. This task involves comparing multiple cities, considering factors like current weather conditions, upcoming cultural or seasonal events, and overall travel expenses. Your final answer must be a detailed report on the chosen city, including actual flight costs, weather forecast, and attractions.
+                **Description**: Analyze and select the best city for the trip based on specific criteria such as weather patterns, seasonal events, and travel costs. 
+                This task involves comparing multiple cities, considering factors like current weather conditions, upcoming cultural or seasonal events, and overall travel expenses. 
+                Your final answer must be a detailed report on the chosen city, including actual flight costs, weather forecast, and attractions.
                     
                 **Parameters**:
                 - Origin: {origin}
@@ -63,7 +65,8 @@ class TravelTasks:
             description=dedent(
                 f"""
                 **Task**: Gather In-depth City Guide Information
-                **Description**: Compile an in-depth guide for the selected city, gathering information about key attractions, local customs, special events, and daily activity recommendations. This guide should provide a thorough overview of what the city has to offer, including hidden gems, cultural hotspots, must-visit landmarks, weather forecasts, and high-level cost
+                **Description**: Compile an in-depth guide for the selected city, gathering information about key attractions, local customs, special events, and daily activity recommendations. 
+                This guide should provide a thorough overview of what the city has to offer, including hidden gems, cultural hotspots, must-visit landmarks, weather forecasts, and high-level cost
                     
                 **Parameters**:
                 - Cities: {city}
